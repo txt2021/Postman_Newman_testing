@@ -5,7 +5,7 @@
   "scripts": {
     "tern-on-api": "cp mockApi/db_back_up.yaml mockApi/db_stage.yaml && npx yaml-server --hotReload=off --autoStart=off --port 3000 --database ./mockApi/db_stage.yaml",
     "tests-api-run": "npx newman run petstore.collection.json -r htmlextra --reporter-htmlextra-export ./testResults/report.html",
-    "cache-clean-run":"rm -rf node_modules && rm ./package-lock.json && npm install"
+    "cache-clean-run":"rm -rf node_modules && rm ./package-lock.json && npm cache clean --force && npm install && npm start"
   },
   "keywords": ["api","mock","yaml-server","rest"],
   "author": "",
