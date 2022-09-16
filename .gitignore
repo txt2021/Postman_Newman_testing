@@ -1,3 +1,4 @@
 /node_modules
 /newman
 /testResults
+package-lock.json
