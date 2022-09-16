@@ -16,6 +16,7 @@ jobs:
     - name: Install dependencies
       run: npm ci
     - name: Run Postman Colection
+      run: npm run tern-on-api
       run: npm run tests-api-run
     - uses: actions/upload-artifact@v2
       if: always()
