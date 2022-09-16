@@ -21,7 +21,7 @@ jobs:
     - name: Install newman report  
       run: npm install -g newman-reporter-htmlextra    
     - name: Run Postman Colection      
-      run: npm run tests-api-run
+      run: npm run 
     - uses: actions/upload-artifact@v2
       if: always()
       with:
@@ -32,7 +32,7 @@ jobs:
       uses: cpina/github-action-push-to-another-repository@main
       if: always()
       env:
-        API_TOKEN_GITHUB: ${{ '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' }}
+        API_TOKEN_GITHUB: ${{ secrets.SECRET_TOKEN }}
       with:
         source-directory: 'testResults'
         destination-github-username: 'txt2021'
