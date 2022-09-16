@@ -16,7 +16,9 @@ jobs:
     - name: Clear cache
       run: npm run cache-clean-run
     - name: Install dependencies
-      run: npm install    
+      run: npm install
+    - name: Start dependencies
+      run: npm start     
     - name: Run Postman Colection      
       run: npm run tests-api-run
     - uses: actions/upload-artifact@v2
