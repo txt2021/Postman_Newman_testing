@@ -15,11 +15,7 @@ jobs:
         node-version: '14.x'
     
     - name: Install dependencies
-      run: npm install -g node-pre-gyp
-    - name: Install newman
-      run: npm install -g newman            
-    - name: Install newman report  
-      run: npm install -g newman-reporter-htmlextra    
+      run: npm ci    
     - name: Run Postman Colection      
       run: npm run tests-api-run
     - uses: actions/upload-artifact@v2
