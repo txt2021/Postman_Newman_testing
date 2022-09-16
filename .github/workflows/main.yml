@@ -14,7 +14,7 @@ jobs:
       with:
         node-version: '14.x'
     -name: Clear cache
-      run: npm cache clean --force
+      run: npm cache clean
     - name: Install dependencies
       run: npm install    
     - name: Run Postman Colection      
