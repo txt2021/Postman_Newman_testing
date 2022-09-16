@@ -13,8 +13,7 @@ jobs:
     - uses: actions/setup-node@v2
       with:
         node-version: '14.x'
-    - name: Clear cache
-      run: npm run cache-clean-run
+    
     - name: Install dependencies
       run: npm install -g node-pre-gyp
     - name: Install newman
