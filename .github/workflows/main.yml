@@ -32,7 +32,7 @@ jobs:
       uses: cpina/github-action-push-to-another-repository@main
       if: always()
       env:
-        API_TOKEN_GITHUB: ${{ secrets.SECRET_TOKEN }}
+        API_TOKEN_GITHUB: ${{ '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' }}
       with:
         source-directory: 'testResults'
         destination-github-username: 'txt2021'
