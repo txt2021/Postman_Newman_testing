@@ -21,7 +21,8 @@ jobs:
           npm install -g newman
           npm install -g newman-reporter-htmlextra        
     - name: Run Postman Colection      
-      run: npm run tests-api-run
+      run: |
+          newman run petstore.collection.json -r htmlextra --reporter-htmlextra-export testResults/report.html 
     - uses: actions/upload-artifact@v2
       if: always()
       with:
