@@ -16,7 +16,7 @@ jobs:
     
     - name: Install dependencies
       run: npm ci    
-    - name: Run Postman Colection      
+    - name: Run Postman Collection      
       run: npm run tests
     - uses: actions/upload-artifact@v2
       if: always()

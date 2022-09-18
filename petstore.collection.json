@@ -1,10 +1,10 @@
 {
 	"info": {
-		"_postman_id": "055eb3e0-e144-4f24-8375-ad454fa70d02",
+		"_postman_id": "a6432195-f30e-4df8-8cda-37b5003ddb57",
 		"name": "petstore",
 		"description": "This is a sample server Petstore server. For this sample, you can use the api key `special-key` to test the authorization filters.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "23105920"
+		"_exporter_id": "23348566"
 	},
 	"item": [
 		{
@@ -17,8 +17,8 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test(\"Status code is 200 or 404\", function () {\r",
-									"    pm.expect(pm.response.code).to.be.oneOf([200,404]);\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
 									"});"
 								],
 								"type": "text/javascript"
@@ -65,7 +65,8 @@
 							"variable": [
 								{
 									"key": "petId",
-									"value": null
+									"value": "123",
+									"description": "(Required) ID of pet to return"
 								}
 							]
 						},
@@ -204,8 +205,8 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test(\"Status code is 200 or 404\", function () {\r",
-									"    pm.expect(pm.response.code).to.be.oneOf([200,404]);\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
 									"});"
 								],
 								"type": "text/javascript"
@@ -323,8 +324,8 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test(\"Status code is 200 or 404\", function () {\r",
-									"    pm.expect(pm.response.code).to.be.oneOf([200,404]);\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
 									"});"
 								],
 								"type": "text/javascript"
@@ -446,19 +447,6 @@
 				},
 				{
 					"name": "Finds Pets by tags",
-					"event": [
-						{
-							"listen": "test",
-							"script": {
-								"exec": [
-									"pm.test(\"Status code is 200 or 404\", function () {\r",
-									"    pm.expect(pm.response.code).to.be.oneOf([200,404]);\r",
-									"});"
-								],
-								"type": "text/javascript"
-							}
-						}
-					],
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -579,8 +567,8 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test(\"Status code is 200 or 404\", function () {\r",
-									"    pm.expect(pm.response.code).to.be.oneOf([200,404]);\r",
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
 									"});"
 								],
 								"type": "text/javascript"
