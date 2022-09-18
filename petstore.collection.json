@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "a6432195-f30e-4df8-8cda-37b5003ddb57",
+		"_postman_id": "f00e16b4-e76b-42a7-9a7b-4bdf7bf5f2a2",
 		"name": "petstore",
 		"description": "This is a sample server Petstore server. For this sample, you can use the api key `special-key` to test the authorization filters.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
@@ -17,9 +17,16 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {\r",
-									"    pm.response.to.have.status(200);\r",
-									"});"
+									"pm.test(\"Response time is less than 500ms\", () => {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"pm.test(\"Correct status code\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200,404]);\r",
+									"});\r",
+									"pm.test(\"Content-Type header is present\", () => {\r",
+									"  pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -65,8 +72,7 @@
 							"variable": [
 								{
 									"key": "petId",
-									"value": "123",
-									"description": "(Required) ID of pet to return"
+									"value": null
 								}
 							]
 						},
@@ -205,9 +211,16 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {\r",
-									"    pm.response.to.have.status(200);\r",
-									"});"
+									"pm.test(\"Response time is less than 500ms\", () => {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"pm.test(\"Correct status code\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200,404]);\r",
+									"});\r",
+									"pm.test(\"Content-Type header is present\", () => {\r",
+									"  pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -324,9 +337,16 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {\r",
-									"    pm.response.to.have.status(200);\r",
-									"});"
+									"pm.test(\"Response time is less than 500ms\", () => {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"pm.test(\"Correct status code\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200,404]);\r",
+									"});\r",
+									"pm.test(\"Content-Type header is present\", () => {\r",
+									"  pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									""
 								],
 								"type": "text/javascript"
 							}
@@ -447,6 +467,26 @@
 				},
 				{
 					"name": "Finds Pets by tags",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Response time is less than 500ms\", () => {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"pm.test(\"Correct status code\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200,404]);\r",
+									"});\r",
+									"pm.test(\"Content-Type header is present\", () => {\r",
+									"  pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
 					"request": {
 						"auth": {
 							"type": "noauth"
@@ -567,9 +607,16 @@
 							"listen": "test",
 							"script": {
 								"exec": [
-									"pm.test(\"Status code is 200\", function () {\r",
-									"    pm.response.to.have.status(200);\r",
-									"});"
+									"pm.test(\"Response time is less than 500ms\", () => {\r",
+									"  pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"pm.test(\"Correct status code\", function () {\r",
+									"    pm.expect(pm.response.code).to.be.oneOf([200,404]);\r",
+									"});\r",
+									"pm.test(\"Content-Type header is present\", () => {\r",
+									"  pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									""
 								],
 								"type": "text/javascript"
 							}
