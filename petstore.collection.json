@@ -4,7 +4,7 @@
 		"name": "petstore",
 		"description": "This is a sample server Petstore server. For this sample, you can use the api key `special-key` to test the authorization filters.",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "23105920"
+		"_exporter_id": "23348566"
 	},
 	"item": [
 		{
